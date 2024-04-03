@@ -1,0 +1,8 @@
+main{
+    display: block;
+    margin: 0 auto;
+    padding: 1em;
+    width: 450px;
+    border: solid 2px navy;
+}
+

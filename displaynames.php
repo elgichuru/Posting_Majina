@@ -1,6 +1,13 @@
 <?php
-$first_name=$_POST['firstname'];
-$last_name=$_POST['lastname'];
+$first_name= filter_input(INPUT_POST, 'firstname');
+$last_name= filter_input(INPUT_POST,'lastname');
+$x=14;
+$y=8;
+$result=$x+$y;
+$result1=$x-$y;
+$result2=$x*$y;
+$result3=$x/$y;
+$date=date('D-M-y');
 ?>
 
 <!Doctype html>
@@ -16,7 +23,11 @@ $last_name=$_POST['lastname'];
         <label>Last Names:</label>
         <span><b><?php echo htmlspecialchars($last_name); ?></b></span><br>
         <label>Full Name:</label>
-        <span><?php echo htmlspecialchars("$first_name $last_name"); ?></span>
+        <span><?php echo htmlspecialchars("$first_name $last_name"); ?></span><br>
+        <label>Today's Date:</label>
+        <span><?php echo $date; ?></span><br>
+        <label>Result </label>
+        <span><b><?php echo htmlspecialchars($result); ?></b></span>
         </main>
         
     </body>
